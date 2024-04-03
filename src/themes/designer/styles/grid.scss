@@ -1,0 +1,30 @@
+.snippet-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 10px);
+  grid-template-rows: repeat(12, 10px);
+  row-gap: 0 !important;
+  column-gap: 0 !important;
+  margin: 5px !important;
+  width: 80px !important;
+  height: 50px !important;
+  float: left;
+  padding: 2px;
+
+  &:hover,
+  &:focus {
+    @include selection(15px, -5px);
+    cursor: pointer;
+  }
+}
+
+.snippet-grid-cell {
+  background: #d9d9d9;
+  outline: 1px solid gray;
+  min-width: 10px;
+  min-height: 10px;
+  margin: 2px;
+
+  &[future-role="article"] {
+    background: #bfbfbf;
+  }
+}
